@@ -9,6 +9,8 @@ function consultaCEP(){
         success:function(response){
             console.log(response);
             $("#logradouro").html(response.logradouro)
+            $("#titulo_cep").html("CEP "+response.cep)
+
            // document.getElementById("logradouro").innerHTML= response.logradouro
             document.getElementById("bairro").innerHTML    = response.bairro
             document.getElementById("localidade").innerHTML= response.localidade
@@ -19,3 +21,8 @@ function consultaCEP(){
     })
 
 }
+/*
+()=>{
+    $(".cep").hide()
+}
+*/
